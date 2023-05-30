@@ -54,7 +54,7 @@ int print_pointer(va_list types, char buffer[],
 
 /************************* PRINT NON PRINTABLE *************************/
 /**
- * print_non_printable - Prints ascii codes into hexa of   non printable chars
+ * print_non_printable - Prints ascii codes into hexa of non printable chars
  * @types: Lista of all the arguments
  * @buffer: Buffer array to handle print
  * @flags:  Calculates perfectly  active flags
@@ -123,7 +123,7 @@ int print_reverse(va_list types, char buffer[],
 
 		str = ")Null(";
 	}
-	for (v = 0; str[i]; i++)
+	for (v = 0; str[v]; v++)
 		;
 
 	for (v = v - 1; v >= 0; v--)
@@ -171,7 +171,7 @@ int print_rot13string(va_list types, char buffer[],
 		{
 			if (in[n] == str[v])
 			{
-				x = out[j];
+				x = out[n];
 				write(1, &x, 1);
 				count++;
 				break;
