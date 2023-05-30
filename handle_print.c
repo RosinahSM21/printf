@@ -14,8 +14,8 @@
 int handle_print(const char *fmt, int *ind, va_list list, char buffer[],
 	int flags, int width, int precision, int size)
 {
-	int a = 0; 
-	int leng = 0; 
+	int a = 0;
+	int leng = 0;
 	int chars = -1;
 
 	fmt_t fmt_types[] = {
