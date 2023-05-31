@@ -13,17 +13,16 @@ int get_flags(const char *format, int *i)
 	int a;
 	int b;
 	int flg;
-
-	a = 0;
-	flg = 0;
-
 	const char FLAGS_CH[] = {'-', '+', '0', '#', ' ', '\0'};
 	const int FLAGS_ARR[] = {F_MINUS, F_PLUS, F_ZERO, F_HASH, F_SPACE, 0};
+
+	a = 0;
+        flg = 0;
 
 	for (b = *i + 1; format[b] != '\0'; b++)
 	{
 		for (; FLAGS_CH[a] != '\0'; a++)
-			if (format[curr_i] == FLAGS_CH[a])
+			if (format[b] == FLAGS_CH[a])
 			{
 				flg |= FLAGS_ARR[a];
 				break;
